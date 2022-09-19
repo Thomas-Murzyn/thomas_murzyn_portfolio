@@ -1,21 +1,34 @@
-import { useTheme } from "next-themes";
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useRef } from "react";
+import Me from "../components/Me";
 
 export default function Home() {
-  const [loading, setLoading] = useState(false);
-  const { theme, setTheme } = useTheme();
+  const myRef = useRef();
 
   useEffect(() => {
-    setLoading(true);
-  }, []);
+    console.log(myRef);
 
-  if (!loading) {
-    return null;
-  }
+    const observer = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      console.log("🚀 ~ file: index.js ~ line 12 ~ observer ~ entry", entry);
+      if (entry.isIntersecting) {
+        entry.target.classList.add("toggleShow");
+      } else {
+        entry.target.classList.remove("toggleShow");
+      }
+    });
+
+    observer.observe(myRef.current);
+  }, []);
 
   return (
     <div className="h-screen bg-Dark dark:bg-Light">
-      <h1 className="text-5xl text-Light dark:text-Dark">Hello world</h1>
+      <Me myRef={myRef} />
+      <div className="h-screen flex justify-center items-center bg-Dark dark:bg-Light">
+        <h2 className="text-5xl text-Light dark:text-Dark">Wooo scroolll</h2>
+      </div>
+      <div className="h-screen flex justify-center items-center bg-Dark dark:bg-Light">
+        <h2 className="text-5xl text-Light dark:text-Dark">Wooo ihi</h2>
+      </div>
     </div>
   );
 }

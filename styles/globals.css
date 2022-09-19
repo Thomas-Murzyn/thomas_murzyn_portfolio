@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.toggleHidden {
+  opacity: 0;
+  transition: all 1.5s;
+  transform: translateX(-100%);
+}
+
+.toggleShow {
+  opacity: 1;
+  transform: translateX(0);
+}
