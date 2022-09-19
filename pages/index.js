@@ -21,7 +21,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="h-screen bg-Dark dark:bg-Light">
+    <main className=" bg-Dark dark:bg-Light">
       <Me myRef={myRef} />
       <div className="h-screen flex justify-center items-center bg-Dark dark:bg-Light">
         <h2 className="text-5xl text-Light dark:text-Dark">Wooo scroolll</h2>
@@ -29,6 +29,6 @@ export default function Home() {
       <div className="h-screen flex justify-center items-center bg-Dark dark:bg-Light">
         <h2 className="text-5xl text-Light dark:text-Dark">Wooo ihi</h2>
       </div>
-    </div>
+    </main>
   );
 }
