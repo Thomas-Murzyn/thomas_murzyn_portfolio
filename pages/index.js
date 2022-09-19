@@ -1,5 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import Me from "../components/Me";
+import About from "../components/About";
+import Skills from "../components/Skills";
 
 export default function Home() {
   const myRef = useRef();
@@ -22,13 +24,9 @@ export default function Home() {
 
   return (
     <main className=" bg-Dark dark:bg-Light">
-      <Me myRef={myRef} />
-      <div className="h-screen flex justify-center items-center bg-Dark dark:bg-Light">
-        <h2 className="text-5xl text-Light dark:text-Dark">Wooo scroolll</h2>
-      </div>
-      <div className="h-screen flex justify-center items-center bg-Dark dark:bg-Light">
-        <h2 className="text-5xl text-Light dark:text-Dark">Wooo ihi</h2>
-      </div>
+      <Me />
+      <About />
+      <Skills myRef={myRef} />
     </main>
   );
 }

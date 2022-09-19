@@ -4,11 +4,13 @@
 
 .toggleHidden {
   opacity: 0;
-  transition: all 1.5s;
+  transition: all 2s;
+  filter: blur(5px);
   transform: translateX(-100%);
 }
 
 .toggleShow {
   opacity: 1;
+  filter: blur(0px);
   transform: translateX(0);
 }
