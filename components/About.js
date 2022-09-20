@@ -3,6 +3,22 @@ import Title from "./Title";
 import SectionContainer from "./SectionContainer";
 
 function About() {
+  // Function will execute on click of button
+  const onButtonClick = () => {
+    // using Java Script method to get PDF file
+    fetch("CV-Thomas-Murzyn.pdf").then((response) => {
+      response.blob().then((blob) => {
+        // Creating new object of PDF file
+        const fileURL = window.URL.createObjectURL(blob);
+        // Setting various property values
+        let alink = document.createElement("a");
+        alink.href = fileURL;
+        alink.download = "CV-Thomas-Murzyn.pdf";
+        alink.click();
+      });
+    });
+  };
+
   return (
     <SectionContainer section="about">
       <Title title="A propos de moi" />
@@ -17,7 +33,7 @@ function About() {
         Je conçois et réalise des sites web de la partie front end avec React et
         Typescript à la partie back end avec Node js.
       </p>
-      <Button title="Télécharger mon cv" />
+      <Button action={onButtonClick} title="Télécharger mon cv" />
     </SectionContainer>
   );
 }
