@@ -1,12 +1,11 @@
-import React from "react";
+import Button from "./Button";
+import Title from "./Title";
 
 function About() {
   return (
     <div className="h-screen w-3/4 lg:w-2/4 m-auto p-2 flex justify-center items-center bg-Dark dark:bg-Light">
       <div className="h-full flex flex-col justify-center items-center">
-        <h2 className="text-7xl font-bold text-Light dark:text-Dark">
-          A propos de moi
-        </h2>
+        <Title title="A propos de moi" />
         <p className="text-Light dark:text-Dark text-xl mt-5">
           J'ai 30 ans et je vis en région Parisienne.
         </p>
@@ -18,6 +17,7 @@ function About() {
           Je conçois et réalise des sites web de la partie front end avec React
           et Typescript à la partie back end avec Node js.
         </p>
+        <Button title="Télécharger mon cv" />
       </div>
     </div>
   );

@@ -11,7 +11,7 @@ export default function Home() {
 
     const observer = new IntersectionObserver((entries) => {
       const entry = entries[0];
-      console.log("🚀 ~ file: index.js ~ line 12 ~ observer ~ entry", entry);
+
       if (entry.isIntersecting) {
         entry.target.classList.add("toggleShow");
       } else {
