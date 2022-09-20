@@ -16,6 +16,7 @@ function TechCard({ title, infos }) {
               height="100"
               objectFit="contain"
               src={`/${info}.${info === "react" ? "svg" : "png"}`}
+              className="text-Light"
             />
           );
         })}

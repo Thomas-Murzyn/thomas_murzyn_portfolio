@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import Me from "../components/Me";
 import About from "../components/About";
 import Skills from "../components/Skills";
+import Works from "../components/Works";
 
 export default function Home() {
   const myRef = useRef();
@@ -27,6 +28,7 @@ export default function Home() {
       <Me />
       <About />
       <Skills myRef={myRef} />
+      <Works />
     </main>
   );
 }
