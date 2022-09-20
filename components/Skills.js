@@ -1,10 +1,11 @@
 import TechCard from "./TechCard";
 import Tools from "./Tools";
 import Title from "./Title";
+import SectionContainer from "./SectionContainer";
 
 function Skills({ myRef }) {
   return (
-    <div className="h-screen w-3/4 lg:w-2/4 m-auto p-2 flex flex-col justify-center items-center bg-Dark dark:bg-Light">
+    <SectionContainer section={"skills"}>
       <Title title="Mes compétences" />
       <div
         ref={myRef}
@@ -31,7 +32,7 @@ function Skills({ myRef }) {
         </h3>
         <Tools />
       </div>
-    </div>
+    </SectionContainer>
   );
 }
 
