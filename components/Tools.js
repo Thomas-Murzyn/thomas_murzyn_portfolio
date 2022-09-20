@@ -7,7 +7,7 @@ import Tool from "./Tool";
 function Tools() {
   return (
     <div
-      className={`text-Light dark:text-Dark bg-DarkGray dark:bg-Light flex flex-col gap-3 p-5 w-fit border-2 border-Ligth rounded mt-10 hover:border-HeadLight hover:text-HeadLight`}
+      className={`text-Light dark:text-Dark bg-DarkGray dark:bg-Light flex flex-col gap-3 p-5 w-fit border-2 border-Ligth rounded mt-10 hover:border-HeadLight hover:text-HeadLight shadow-lg`}
     >
       <Tool title="Autodidacte" Icon={DirectionsWalkIcon} />
       <Tool title="Relationnel clients" Icon={HandshakeIcon} />
