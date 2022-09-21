@@ -7,7 +7,7 @@ function Works() {
   return (
     <SectionContainer section="works">
       <Title title="Portfolio" />
-      <div className="w-full flex justify-center flex-wrap gap-5 ">
+      <div className="w-full  flex justify-center flex-wrap gap-5 ">
         {Data.map((work) => {
           return <Work key={work.id} work={work} />;
         })}

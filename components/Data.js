@@ -1,6 +1,7 @@
 import vintedPicture from "../public/Vinted.png";
 import tripadvisorPicture from "../public/TripAdvisor.png";
 import gamepadPicture from "../public/gamepadPicture.png";
+import marvelPicture from "../public/marvelPicture.png";
 
 const data = [
   {
@@ -31,6 +32,15 @@ const data = [
     url: "https://tripadvisor-by-thomas.netlify.app",
     description:
       "Ce site est une réplique Front-End de la page Paris du célèbre site TripAdvisor. Il a été réalisé en HTML CSS et Vanilla Javascript.",
+  },
+
+  {
+    id: 4,
+    name: "Marvel",
+    techno: ["HTML", "CSS", "React", "Node js", "Mongo db", "Express"],
+    picture: marvelPicture,
+    url: "https://marvel-by-tm.netlify.app",
+    description: "Un site pour chercher les characters et comics marvel.",
   },
 ];
 
