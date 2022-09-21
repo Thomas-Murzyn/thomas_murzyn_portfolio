@@ -10,8 +10,6 @@ export default function Home() {
   const myRef = useRef();
 
   useEffect(() => {
-    console.log(myRef);
-
     const observer = new IntersectionObserver((entries) => {
       const entry = entries[0];
 

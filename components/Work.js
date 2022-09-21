@@ -17,7 +17,12 @@ function Work({ work }) {
       onMouseLeave={() => setIsActive(false)}
       className="w-2/5 xl:w-4.5/12 mt-10 h-58 border-2 border-Light dark:border-Dark rounded-md shadow-lg cursor-pointer relative"
     >
-      <Image src={work.picture} style={workImage} />
+      <Image
+        src={work.picture}
+        style={workImage}
+        alt={`site web ${work.name}`}
+        priority={work.id === 3 ? true : false}
+      />
 
       <Link className="w-full" href={work.url} passHref>
         <div

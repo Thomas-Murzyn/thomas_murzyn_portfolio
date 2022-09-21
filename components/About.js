@@ -1,6 +1,7 @@
 import Button from "./Button";
 import Title from "./Title";
 import SectionContainer from "./SectionContainer";
+import DownloadIcon from "@mui/icons-material/Download";
 
 function About() {
   // Function will execute on click of button
@@ -33,7 +34,11 @@ function About() {
         Je conçois et réalise des sites web de la partie front end avec React et
         Typescript à la partie back end avec Node js.
       </p>
-      <Button action={onButtonClick} title="Télécharger mon cv" />
+      <Button
+        action={onButtonClick}
+        title="Télécharger mon cv"
+        Icon={DownloadIcon}
+      />
     </SectionContainer>
   );
 }
