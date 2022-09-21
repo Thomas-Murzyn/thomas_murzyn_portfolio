@@ -4,6 +4,7 @@ import About from "../components/About";
 import Skills from "../components/Skills";
 import Works from "../components/Works";
 import Head from "next/head";
+import Contact from "../components/Contact";
 
 export default function Home() {
   const myRef = useRef();
@@ -36,6 +37,7 @@ export default function Home() {
         <About />
         <Skills myRef={myRef} />
         <Works />
+        <Contact />
       </main>
     </>
   );
