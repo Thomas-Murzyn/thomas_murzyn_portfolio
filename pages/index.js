@@ -5,8 +5,9 @@ import Skills from "../components/Skills";
 import Works from "../components/Works";
 import Head from "next/head";
 import Contact from "../components/Contact";
+import MiniNav from "../components/MiniNav";
 
-export default function Home() {
+export default function Home({ showMiniNav }) {
   const myRef = useRef();
 
   useEffect(() => {
@@ -36,6 +37,7 @@ export default function Home() {
         <Skills myRef={myRef} />
         <Works />
         <Contact />
+        {showMiniNav && <MiniNav />}
       </main>
     </>
   );

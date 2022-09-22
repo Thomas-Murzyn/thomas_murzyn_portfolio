@@ -4,15 +4,16 @@ import FormElement from "./FormElement";
 import SendIcon from "@mui/icons-material/Send";
 import { useState } from "react";
 import emailjs from "emailjs-com";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import Link from "next/link";
 
 function Contact() {
   const [name, setName] = useState("");
-  const [firstName, setFirstName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [emailError, setEmailError] = useState(null);
   const [nameError, setNameError] = useState(null);
-  const [firstNameError, setFirstNameError] = useState(null);
   const [messageError, setMessageError] = useState(null);
   const [isValidate, setIsValidate] = useState(false);
 
@@ -38,14 +39,9 @@ function Contact() {
       setEmailError("Email invalide");
     } else if (containsSpecialChars(name)) {
       setNameError("Le nom ne doit pas contenir de caractères spéciaux.");
-    } else if (containsSpecialChars(firstName)) {
-      setFirstNameError(
-        "Le prénom ne doit pas contenir de caractères spéciaux."
-      );
     } else {
       const data = {
         name,
-        firstName,
         email,
         message,
       };
@@ -73,8 +69,24 @@ function Contact() {
 
   return (
     <SectionContainer section={"contact"}>
-      <Title title="Contact" />
-      <form className="bg-Dark dark:bg-Light w-3/4 sm:w-2/4 mb-10 p-3 flex flex-col justify-center items-center relative">
+      <Title title="Créons quelque chose ensemble" />
+      <div className="text-Light dark:text-Dark text-xl border-2 border-Light dark:border-Dark p-2 rounded shadow-lg mt-6 mb-3">
+        <Link href={"https://www.linkedin.com/in/thomas-murzyn/"} passHref>
+          <div className="flex gap-2 items-center mt-2 cursor-pointer">
+            <LinkedInIcon />
+            <h4>Retrouvez-moi sur Linkedin</h4>
+          </div>
+        </Link>
+
+        <Link href={"https://github.com/Thomas-Murzyn"} passHref>
+          <div className="flex gap-2 items-center mt-2 cursor-pointer">
+            <GitHubIcon />
+            <h4>Découvrez mon travail sur Github </h4>
+          </div>
+        </Link>
+      </div>
+
+      <form className="my-() bg-Dark dark:bg-Light w-3/4 sm:w-2/4 mb-10 p-3 flex flex-col justify-center items-center">
         <FormElement
           value={name}
           setValue={setName}
@@ -82,14 +94,6 @@ function Contact() {
           type="text"
           error={nameError}
           setError={setNameError}
-        />
-        <FormElement
-          value={firstName}
-          setValue={setFirstName}
-          name="Prénom"
-          type="text"
-          error={firstNameError}
-          setError={setFirstNameError}
         />
         <FormElement
           value={email}

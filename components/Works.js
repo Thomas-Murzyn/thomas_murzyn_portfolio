@@ -6,7 +6,7 @@ import Data from "./Data";
 function Works() {
   return (
     <SectionContainer section="works">
-      <Title title="Portfolio" />
+      <Title title="Mon portfolio" />
       <div className="w-full  flex justify-center flex-wrap gap-5 ">
         {Data.map((work) => {
           return <Work key={work.id} work={work} />;

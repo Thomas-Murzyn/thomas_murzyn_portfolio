@@ -20,3 +20,11 @@
   filter: blur(0px);
   transform: translateX(0);
 }
+
+.hiddeNavItems {
+  display: none;
+}
+
+.showNavItems {
+  display: inherit;
+}
