@@ -8,7 +8,9 @@ function Me() {
       <h1 className="text-7xl font-bold text-Light dark:text-Dark text-center">
         Bonjour,&nbsp; je suis Thomas Developpeur Web.
       </h1>
-      <Button title="Me contacter" Icon={EmailOutlinedIcon} />
+      <a href="#contact">
+        <Button title="Me contacter" Icon={EmailOutlinedIcon} />
+      </a>
     </SectionContainer>
   );
 }

@@ -16,6 +16,8 @@ module.exports = {
       MoonColor: "#F5F3CE",
       ShadowMoonColor: "#C4C2A5",
       SunColor: "#F28C38",
+      ErrorColor: "#FF0000",
+      SuccessColor: "#28A745",
     },
     extend: {},
   },
