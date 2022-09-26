@@ -1,6 +1,6 @@
 import vintedPicture from "../public/Vinted.png";
 import tripadvisorPicture from "../public/TripAdvisor.png";
-import gamepadPicture from "../public/gamepadPicture.png";
+import gamepadPicture from "../public/gamePadPicture.png";
 import marvelPicture from "../public/marvelPicture.png";
 
 const data = [
