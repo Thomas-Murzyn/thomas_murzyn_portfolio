@@ -9,10 +9,7 @@ import Nav from "./Nav";
 function Header({ showMiniNav, setShowMiniNav }) {
   const [themeLoading, setThemeLoading] = useState(false);
   const [windowSize, setWindowSize] = useState(null);
-  console.log(
-    "🚀 ~ file: Header.js ~ line 12 ~ Header ~ windowSize",
-    windowSize
-  );
+
   const { theme, setTheme } = useTheme();
 
   useEffect(() => {

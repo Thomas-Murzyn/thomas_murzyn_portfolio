@@ -6,6 +6,7 @@ import Works from "../components/Works";
 import Head from "next/head";
 import Contact from "../components/Contact";
 import MiniNav from "../components/MiniNav";
+import Footer from "../components/Footer";
 
 export default function Home({ showMiniNav }) {
   const myRef = useRef();
@@ -38,6 +39,7 @@ export default function Home({ showMiniNav }) {
         <Works />
         <Contact />
         {showMiniNav && <MiniNav />}
+        <Footer />
       </main>
     </>
   );
