@@ -5,6 +5,7 @@ import LightModeIcon from "@mui/icons-material/LightMode";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useTheme } from "next-themes";
 import Nav from "./Nav";
+import { eslint } from "../next.config";
 
 function Header({ showMiniNav, setShowMiniNav }) {
   const [themeLoading, setThemeLoading] = useState(false);

@@ -24,7 +24,7 @@ function About() {
     <SectionContainer section="about">
       <Title title="A propos de moi" />
       <p className="text-Light dark:text-Dark text-xl mt-5">
-        J'ai 30 ans et je vis en région Parisienne.
+        J&apos;ai 30 ans et je vis en région Parisienne.
       </p>
       <p className="text-Light dark:text-Dark text-xl mt-5 text-center">
         Je suis Développeur Web & Mobile, passionné par les nouvelles

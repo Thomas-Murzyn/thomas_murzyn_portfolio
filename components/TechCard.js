@@ -12,6 +12,7 @@ function TechCard({ title, infos }) {
           return (
             <Image
               key={index}
+              alt={`technologie ${title}`}
               width="150"
               height="100"
               objectFit="contain"
