@@ -1,11 +1,10 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import IconContainer from "./IconContainer";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useTheme } from "next-themes";
 import Nav from "./Nav";
-import { eslint } from "../next.config";
 
 function Header({ showMiniNav, setShowMiniNav }) {
   const [themeLoading, setThemeLoading] = useState(false);
@@ -13,11 +12,20 @@ function Header({ showMiniNav, setShowMiniNav }) {
 
   const { theme, setTheme } = useTheme();
 
+  const [showBurgerMenu, setShowBurgerMenu] = useState(false);
+
   useEffect(() => {
+    setThemeLoading(true);
+
     if (windowSize > 640) {
       setShowMiniNav(false);
+      setShowBurgerMenu(false);
     }
-    setThemeLoading(true);
+
+    if (windowSize < 640 && windowSize !== null) {
+      console.log(windowSize);
+      setShowBurgerMenu(true);
+    }
 
     function getWindowSize() {
       const { innerWidth } = window;
@@ -51,10 +59,12 @@ function Header({ showMiniNav, setShowMiniNav }) {
         <Nav />
 
         <div className="flex gap-5 items-center">
-          <MenuIcon
-            onClick={() => setShowMiniNav(!showMiniNav)}
-            className="inline sm:hidden text-Light dark:text-Dark border border-Light dark:border-Dark cursor-pointer rounded hover:text-HeadLight dark:hover:text-HeadLight"
-          />
+          {showBurgerMenu && (
+            <MenuIcon
+              onClick={() => setShowMiniNav(!showMiniNav)}
+              className="text-Light dark:text-Dark border border-Light dark:border-Dark cursor-pointer rounded hover:text-HeadLight dark:hover:text-HeadLight"
+            />
+          )}
           <IconContainer
             Icon={theme === "light" ? DarkModeIcon : LightModeIcon}
             title={"dark mode"}
