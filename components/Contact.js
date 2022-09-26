@@ -55,7 +55,6 @@ function Contact() {
         )
         .then((res) => {
           setName("");
-          setFirstName("");
           setEmail("");
           setMessage("");
           setIsValidate(true);
