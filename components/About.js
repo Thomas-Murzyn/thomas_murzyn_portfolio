@@ -2,6 +2,7 @@ import Button from "./Button";
 import Title from "./Title";
 import SectionContainer from "./SectionContainer";
 import DownloadIcon from "@mui/icons-material/Download";
+import { motion } from "framer-motion";
 
 function About() {
   // Function will execute on click of button
@@ -23,17 +24,38 @@ function About() {
   return (
     <SectionContainer section="about">
       <Title title="A propos de moi" />
-      <p className="text-Light dark:text-Dark text-xl mt-5">
+      <motion.p
+        initial={{ opacity: 0 }}
+        whileInView={{
+          opacity: 1,
+        }}
+        transition={{ duration: 1 }}
+        className="text-Light dark:text-Dark text-xl mt-5"
+      >
         J&apos;ai 30 ans et je vis en région Parisienne.
-      </p>
-      <p className="text-Light dark:text-Dark text-xl mt-5 text-center">
+      </motion.p>
+      <motion.p
+        initial={{ opacity: 0 }}
+        whileInView={{
+          opacity: 1,
+        }}
+        transition={{ duration: 1 }}
+        className="text-Light dark:text-Dark text-xl mt-5 text-center"
+      >
         Je suis Développeur Web & Mobile, passionné par les nouvelles
         technologies et leurs facultés à améliorer le quotiden des gens.
-      </p>
-      <p className="text-Light dark:text-Dark text-xl mt-5 text-center">
+      </motion.p>
+      <motion.p
+        initial={{ opacity: 0 }}
+        whileInView={{
+          opacity: 1,
+        }}
+        transition={{ duration: 1 }}
+        className="text-Light dark:text-Dark text-xl mt-5 text-center"
+      >
         Je conçois et réalise des sites web de la partie front end avec React et
         Typescript à la partie back end avec Node js.
-      </p>
+      </motion.p>
       <Button
         action={onButtonClick}
         title="Télécharger mon cv"

@@ -16,6 +16,7 @@ function Header({ showMiniNav, setShowMiniNav }) {
 
   useEffect(() => {
     setThemeLoading(true);
+    setWindowSize(window.innerWidth);
 
     if (windowSize > 640) {
       setShowMiniNav(false);
@@ -42,6 +43,12 @@ function Header({ showMiniNav, setShowMiniNav }) {
       window.removeEventListener("resize", handleWindowResize);
     };
   }, [windowSize]);
+
+  useEffect(() => {
+    if (themeLoading) {
+      setWindowSize(window.innerWidth);
+    }
+  }, []);
 
   if (!themeLoading) {
     return null;
