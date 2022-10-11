@@ -18,6 +18,7 @@ function Work({ work }) {
       className="w-2/5 xl:w-4.5/12 mt-10 h-58 border-2 border-Light dark:border-Dark rounded-md shadow-lg cursor-pointer relative"
     >
       <Image
+        className="rounded"
         src={work.picture}
         style={workImage}
         alt={`site web ${work.name}`}

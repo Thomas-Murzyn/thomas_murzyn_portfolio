@@ -4,9 +4,11 @@ function SectionContainer({ section, children }) {
   return (
     <section
       id={`${section}`}
-      className={` mb-24 sm:mb-0 h-screen w-4/4 xl:w-7/12 lg:w-3/4 m-auto p-2 flex flex-col justify-center items-center bg-Dark dark:bg-Light ${
-        section === "skills" || (section === "contact" && "mt-10")
-      }`}
+      className={` ${
+        section === "skills" || section === "works" || section === "contact"
+          ? "h-auto mb-10"
+          : "h-screen"
+      } w-4/4 xl:w-7/12 lg:w-3/4 mx-auto p-2 flex flex-col justify-center items-center bg-Dark dark:bg-Light`}
     >
       {children}
     </section>
