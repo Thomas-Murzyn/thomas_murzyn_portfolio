@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import Image from "next/future/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -12,7 +13,13 @@ function Work({ work }) {
   };
 
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, x: -200 }}
+      whileInView={{
+        opacity: 1,
+        x: 0,
+      }}
+      transition={{ duration: 1 }}
       onMouseEnter={() => setIsActive(true)}
       onMouseLeave={() => setIsActive(false)}
       className=" w-3/4 sm:w-auto h-48 mt-10  border-2 border-Light dark:border-Dark rounded-md shadow-lg cursor-pointer relative"
@@ -34,7 +41,7 @@ function Work({ work }) {
           <h3 className="text-xl text-center font-bold">{work.name}</h3>
         </div>
       </Link>
-    </div>
+    </motion.div>
   );
 }
 

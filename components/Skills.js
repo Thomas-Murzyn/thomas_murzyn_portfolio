@@ -7,10 +7,7 @@ function Skills({ myRef }) {
   return (
     <SectionContainer section={"skills"}>
       <Title title="Mes compétences" />
-      <div
-        ref={myRef}
-        className="h-full w-full flex flex-col items-center toggleHidden"
-      >
+      <div className="h-full w-full flex flex-col items-center">
         <h3 className="text-Light dark:text-Dark text-3xl mt-10">
           Languages informatique
         </h3>

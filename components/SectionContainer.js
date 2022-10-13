@@ -6,7 +6,7 @@ function SectionContainer({ section, children }) {
       id={`${section}`}
       className={` ${
         section === "skills" || section === "works" || section === "contact"
-          ? "h-auto mb-14"
+          ? "h-auto mb-20"
           : "h-screen"
       } w-4/4 2xl:w-7/12 xl:w-3/4 mx-auto p-2 flex flex-col justify-center items-center bg-Dark dark:bg-Light`}
     >

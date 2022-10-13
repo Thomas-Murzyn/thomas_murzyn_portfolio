@@ -9,22 +9,6 @@ import MiniNav from "../components/MiniNav";
 import Footer from "../components/Footer";
 
 export default function Home({ showMiniNav }) {
-  const myRef = useRef();
-
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      const entry = entries[0];
-
-      if (entry.isIntersecting) {
-        entry.target.classList.add("toggleShow");
-      } else {
-        entry.target.classList.remove("toggleShow");
-      }
-    });
-
-    observer.observe(myRef.current);
-  }, []);
-
   return (
     <>
       <Head>
@@ -35,7 +19,7 @@ export default function Home({ showMiniNav }) {
       <main className=" bg-Dark dark:bg-Light">
         <Me />
         <About />
-        <Skills myRef={myRef} />
+        <Skills />
         <Works />
         <Contact />
         {showMiniNav && <MiniNav />}
