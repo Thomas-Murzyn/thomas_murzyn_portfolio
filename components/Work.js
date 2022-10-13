@@ -15,7 +15,7 @@ function Work({ work }) {
     <div
       onMouseEnter={() => setIsActive(true)}
       onMouseLeave={() => setIsActive(false)}
-      className=" w-3/5 sm:w-auto h-48 mt-10  border-2 border-Light dark:border-Dark rounded-md shadow-lg cursor-pointer relative"
+      className=" w-3/4 sm:w-auto h-48 mt-10  border-2 border-Light dark:border-Dark rounded-md shadow-lg cursor-pointer relative"
     >
       <Image
         className="rounded"
