@@ -15,7 +15,7 @@ function Me() {
         className="flex flex-col justify-center items-center"
       >
         <h1 className="text-5xl sm:text-7xl font-bold text-Light dark:text-Dark text-center">
-          Bonjour,&nbsp; je suis Thomas Developpeur Web.
+          Bonjour,&nbsp; je suis Thomas Developpeur Web
         </h1>
         <a href="#contact">
           <Button title="Me contacter" Icon={EmailOutlinedIcon} />
