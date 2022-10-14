@@ -11,6 +11,7 @@ module.exports = {
       DarkOppacity: "#202023e6",
       Light: "#FFFFFF",
       LightOppacity: "#ffffffe6",
+      LightGray: "#ececec",
       HeadLight: "#909096",
       DarkGray: "#2A2A2A",
       MoonColor: "#F5F3CE",
