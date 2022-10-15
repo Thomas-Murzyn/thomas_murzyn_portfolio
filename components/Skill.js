@@ -12,7 +12,13 @@ function Skill({ selectedTab }) {
       className="w-full flex flex-col"
     >
       {selectedTab.skills.map((skill) => {
-        return <DetailSkill name={selectedTab.name} skill={skill} />;
+        return (
+          <DetailSkill
+            key={selectedTab.name}
+            name={selectedTab.name}
+            skill={skill}
+          />
+        );
       })}
     </motion.div>
   );
