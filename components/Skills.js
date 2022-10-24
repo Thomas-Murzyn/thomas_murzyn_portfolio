@@ -1,5 +1,3 @@
-import TechCard from "./TechCard";
-import Tools from "./Tools";
 import Title from "./Title";
 import Skill from "./Skill";
 import SectionContainer from "./SectionContainer";
@@ -38,9 +36,9 @@ function Skills() {
     <SectionContainer section={"skills"}>
       <Title title="Mes compétences" />
       <motion.div
-        initial={{ scale: 0.8 }}
-        whileInView={{ scale: 1 }}
-        transition={{ duration: 1 }}
+        initial={{ scale: 0.8, opacity: 0 }}
+        whileInView={{ scale: 1, opacity: 1 }}
+        transition={{ duration: 1.2 }}
         className="border-2 border-Light dark:border-Dark mt-10 flex flex-col items-center text-Light dark:text-Dark rounded shadow-xl"
       >
         <ul className="flex text-2xl border-b border-LightGray font-bold">
@@ -49,7 +47,7 @@ function Skills() {
               key={item.name}
               className={`${
                 item === selectedTab ? "bg-DarkGray dark:bg-LightGray" : ""
-              }  relative py-4 px-4 cursor-pointer`}
+              }  relative py-4 px-4 cursor-pointer text-lg sm:text-2xl`}
               onClick={() => setSelectedTab(item)}
             >
               {`${item.name}`}
@@ -72,28 +70,3 @@ function Skills() {
 }
 
 export default Skills;
-
-{
-  /* <div className="h-full w-full flex flex-col items-center">
-<h3 className="text-Light dark:text-Dark text-3xl mt-10">
-  Languages informatique
-</h3>
-<div className="w-full flex justify-evenly ">
-  <TechCard
-    description=" lzneflnez"
-    title="Front end"
-    infos={["react", "ts"]}
-  />
-  <TechCard
-    description="znefoo"
-    title="Back end"
-    infos={["logo-node", "logo-mongo"]}
-  />
-</div>
-
-<h3 className="text-Light dark:text-Dark text-3xl mt-10">
-  Soft skills
-</h3>
-<Tools />
-</div> */
-}

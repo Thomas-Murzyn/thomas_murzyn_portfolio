@@ -68,7 +68,7 @@ function Contact() {
 
   return (
     <SectionContainer section={"contact"}>
-      <Title title="Créons quelque chose ensemble" />
+      <Title title="Restons en contact" />
       <div className="text-Light dark:text-Dark text-xl border-2 border-Light dark:border-Dark p-2 rounded shadow-lg mt-6 mb-3">
         <Link href={"https://www.linkedin.com/in/thomas-murzyn/"} passHref>
           <div className="flex gap-2 items-center mt-2 cursor-pointer">
