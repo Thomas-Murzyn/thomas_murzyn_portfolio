@@ -2,10 +2,19 @@ import vintedPicture from "../public/Vinted.png";
 import tripadvisorPicture from "../public/TripAdvisor.png";
 import gamepadPicture from "../public/gamePadPicture.png";
 import marvelPicture from "../public/marvelPicture.png";
+import crwnPicture from "../public/crwnPicture.png";
 
 const data = [
   {
     id: 1,
+    name: "Crown Clothing",
+    techno: ["React js", "Javascript", "Styled components", "Firebase"],
+    picture: crwnPicture,
+    url: "https://crwn-clothing-shop-tm.netlify.app/",
+    description: "Un site e-commerce de démonstration.",
+  },
+  {
+    id: 2,
     name: "Gamepad",
     techno: ["Mongo DB", "Express", "React js", "Node js / Javascript"],
     picture: gamepadPicture,
@@ -15,7 +24,7 @@ const data = [
   },
 
   {
-    id: 2,
+    id: 3,
     name: "Réplique Full Stack de Vinted",
     techno: ["Mongo DB", "Express", "React js", "Node js / Javascript"],
     picture: vintedPicture,
@@ -25,7 +34,7 @@ const data = [
   },
 
   {
-    id: 3,
+    id: 4,
     name: "Réplique Front-end de TripAdvisor",
     techno: ["HTML", "CSS", "Vanilla Javascript"],
     picture: tripadvisorPicture,
@@ -35,7 +44,7 @@ const data = [
   },
 
   {
-    id: 4,
+    id: 5,
     name: "Marvel",
     techno: ["HTML", "CSS", "React", "Node js", "Mongo db", "Express"],
     picture: marvelPicture,
