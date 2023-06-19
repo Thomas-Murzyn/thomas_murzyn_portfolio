@@ -3,10 +3,27 @@ import tripadvisorPicture from "../public/TripAdvisor.png";
 import gamepadPicture from "../public/gamePadPicture.png";
 import marvelPicture from "../public/marvelPicture.png";
 import crwnPicture from "../public/crwnPicture.png";
+import easyRide from "../public/easyRide.png";
 
 const data = [
   {
     id: 1,
+    name: "Easy Ride",
+    techno: [
+      "React js",
+      "Typescript",
+      "Javascript",
+      "Styled components",
+      "Firebase",
+      "Materia Ui",
+      "React testing librairy",
+    ],
+    picture: easyRide,
+    url: "https://easy-ryde.netlify.app/",
+    description: "Un site e-commerce de démonstration.",
+  },
+  {
+    id: 2,
     name: "Crown Clothing",
     techno: ["React js", "Javascript", "Styled components", "Firebase"],
     picture: crwnPicture,
@@ -14,7 +31,7 @@ const data = [
     description: "Un site e-commerce de démonstration.",
   },
   {
-    id: 2,
+    id: 3,
     name: "Gamepad",
     techno: ["Mongo DB", "Express", "React js", "Node js / Javascript"],
     picture: gamepadPicture,
